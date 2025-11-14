@@ -1,3 +1,6 @@
+
+![License](https://img.shields.io/badge/License-MIT-green?style=for-the-badge)
+
 <H1>Linuxmint-S.O</H1>
 
 Este repositório foi criado com o objetivo de registrar, organizar e documentar locais de download de sistemas operacionais, além de explicar como realizar a instalação no Linux Mint.
