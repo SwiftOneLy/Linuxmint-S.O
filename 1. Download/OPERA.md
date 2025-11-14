@@ -1,16 +1,15 @@
-<h1>Link Oficial Para o Download do Browser Opera</h1>
-https://www.opera.com/pt-br/opera
+# Link Oficial para Download do Browser Opera
 
+**[https://www.opera.com/pt-br/opera](https://www.opera.com/pt-br/opera)**
 
-<h2>Passo 1</h2>
+## Passo 1
 
-Abra o arquivo OperaSetup
+Abra o arquivo **OperaSetup**.
 
+## Passo 2
 
-<h2>Passo 2</h2>
+Siga as instruções exibidas durante o processo de instalação.
 
-Siga as instruções
+## Passo 3
 
-<h2>Passo 3</h2>
-
-Aproveite o Navegador Opera
+Aproveite o navegador **Opera**!
