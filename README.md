@@ -19,4 +19,4 @@ Este repositório foi criado com o objetivo de registrar, organizar e documentar
 
 <H2>🛠️ Por que criar este repositório?</H2>
 
-Para facilitar o acesso a informações organizadas e confiáveis, permitindo que qualquer usuário tenha um guia simples, seguro e centralizado para trabalhar com imagens de sistemas no Linux Mint.
+Para facilitar o acesso a informações organizadas e confiáveis, permitindo que qualquer usuário tenha um guia simples, seguro e centralizado para trabalhar com imagens de sistemas no Linux Mint...
