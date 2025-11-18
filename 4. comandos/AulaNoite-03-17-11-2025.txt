@@ -1,0 +1,89 @@
+Objetivo da aula de hoje: 17/11/2025
+
+#01_ Se autenticar com a sua conta no Github no Windows (desktop senac) e também no Linux Mint.
+
+#02_ Material das aulas de GNU/Linux Desktop
+https://github.com/vaamonde/dell-linuxmint
+
+#03_ Material das aulas na Rede SENAC-TAT
+T:\Publica\!!!!!!!RobsonVaamonde\LinuxMint
+
+#04_ Material Extra de Estudos de GNU/Linux
+a) Guia Foca: https://guiafoca.org/
+b) SS64: https://ss64.com/
+c) Aurelio: https://aurelio.net/
+d) DistroWatch: https://distrowatch.com/
+e) LPI: https://learning.lpi.org/pt/
+
+#05_ Conhecendo Terminal (Bash/Shell)
+$ - usuário comum (direitos)
+# - usuário root
+sudo 
+
+#06_ Teclas de Atalho do Terminal
+Ctrl + Alt + T  		--> Terminal
+Ctrl + D				--> atalho exit
+Ctrl + L				--> atalho clear
+Ctrl + Alt + Backspace	--> reiniciar X
+Ctrl + Alt + F?			--> Terminal TTY
+Ctrl + Alt + F7			--> Cinnamon
+
+#07_ Atualizando o Sistema via Terminal
+
+#a) o que é e para que server o arquivo sources.list (Debian)
+#b) o que é e para que server o comando apt (apt-get)
+-------------------------------
+sudo apt update		--> atualizar as listas do sources.list
+
+sudo apt upgrade	--> atualizar todos os softwares
+
+sudo apt upgrade -y
+
+sudo apt dist-upgrade
+sudo apt full-upgrade
+
+sudo apt autoremove
+sudo apt autoclean
+
+sudo apt clean
+
+
+#08_ Desligar a Reiniciar o Terminal
+
+#09_ Integração do Git, VScode e Github
+
+Material Github (Antigo) Dell-LinuxMint: 
+Link: https://github.com/vaamonde/dell-linuxmint/blob/master/software/23-git-github.md
+Vídeo: https://www.youtube.com/watch?v=JDCYyjbrJu0
+
+Material atualizado Python3: 
+Link: https://github.com/vaamonde/python3/blob/main/01-introduction/01-install.md
+Vídeo: https://www.youtube.com/watch?v=klIKuVGRHmM
+
+Link: https://github.com/vaamonde/python3/blob/main/01-introduction/02-git-gthub.md
+Vídeo: https://www.youtube.com/watch?v=VBxmsmPK60s
+
+#02) Instalação dos pacotes básicos para a integração
+
+sudo apt update
+sudo apt install git vim pip python3 
+
+#01) Configuração do Git Local
+a) criar um novo repositório no Github
+b) git clone https://github.com/seuusuario/seurepositório
+c) git config --global user.name "Seu Nome"
+d) git config --global user.email seuemail@seudominio.com
+
+e) git config --global core.editor vim
+f) git config --global merge.tool vimdiff
+g) git config --global color.ui true
+
+h) git config --list
+
+i) git pull
+   git add .
+   git commit -m "Atualização"
+   git push
+-------------------------------------
+
+Desafio final: criar um diretório chamado: aulas, copiar os arquivos da Pasta Pública do Linux Mint para esse diretório e atualizar no seu Github Remoto e Local no Linux Mint
