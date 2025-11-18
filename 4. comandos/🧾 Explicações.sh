@@ -1,211 +1,84 @@
-🧾 Explicações
-1. sudo aqpt update
+#!/bin/bash
+# Histórico comentado de comandos (explicação linha a linha)
 
-Comando digitado errado (“aqpt”). Não funciona.
+sudo aqpt update            # ERRO de digitação → não funciona
+sudo apt update             # Atualiza a lista de pacotes
+sudo apt upgrade            # Atualiza pacotes instalados
+sudo apt upgrade --fix-missing   # Atualiza ignorando arquivos faltando
 
-2. sudo apt update
+exit                        # Encerra o terminal
 
-Atualiza a lista de pacotes disponíveis nos repositórios.
+ECHO MAX VERSTAPPEN         # ERRO → comando inválido (maiúsculo)
+echo MAX VERSTAPPEN         # Imprime texto na tela
 
-3. sudo apt upgrade
+poweroff                    # Desliga o sistema
 
-Atualiza os pacotes instalados para suas versões mais recentes.
-
-4. sudo apt upgrade --fix-missing
-
-Tenta atualizar pacotes ignorando dependências faltando ou arquivos ausentes.
-
-5. exit
-
-Encerra a sessão ou terminal atual.
-
-6. ECHO MAX VERSTAPPEN
-
-Comando inválido (Linux usa comandos minúsculos).
-
-7. echo MAX VERSTAPPEN
-
-Imprime “MAX VERSTAPPEN” no terminal.
-
-8. poweroff
-
-Desliga o computador.
-
-9.
+# Brave Browser: baixar instalador + assinatura + verificar GPG
 curl -fsSLO "https://dl.brave.com/install.sh{,.asc}" && \
 gpg --keyserver hkps://keys.openpgp.org --recv-keys D16166072CACDF2C9429CBF11BF41E37D039F691 && \
 gpg --verify install.sh.asc
 
+curl -fsS https://dl.brave.com/install.sh | sh   # Instala o Brave
+brave-browser               # Tenta abrir o Brave
 
-Baixa o instalador do Brave + assinatura digital, obtém a chave GPG e verifica a autenticidade.
+tor browser download        # ERRO → comando inexistente
 
-10. curl -fsS https://dl.brave.com/install.sh | sh
+sudo apt update             # Atualiza lista de pacotes
+sudo apt install apt-transport-https curl    # Adiciona HTTPS + curl
 
-Baixa e executa o instalador do navegador Brave.
-
-11. brave-browser
-
-Tenta abrir o Brave Browser.
-
-12. tor browser download
-
-Comando inválido. Parece tentativa de baixar o Tor Browser.
-
-13. sudo apt update
-
-Atualiza lista de pacotes.
-
-14. sudo apt install apt-transport-https curl
-
-Instala suporte HTTPS para o APT e o utilitário curl.
-
-15.
-
-Baixa e converte a chave GPG do repositório do Tor:
-
+# Chave do Tor Project
 curl https://deb.torproject.org/torproject.org/gpgkey | \
 sudo gpg --dearmor -o /usr/share/keyrings/tor-archive-keyring.gpg
 
-16.
+# Repositório do Tor
+echo "deb [signed-by=/usr/share/keyrings/tor-archive-keyring.gpg] https://deb.torproject.org/torproject.org stretch main" | \
+sudo tee /etc/apt/sources.list.d/torproject.list
 
-Adiciona o repositório oficial do Tor:
+sudo apt update             # Atualiza lista
+sudo apt install tor torbrowser-launcher    # Instala Tor e Tor Browser
 
-echo "deb [signed-by=/usr/share/keyrings/tor-archive-keyring.gpg] https://deb.torproject.org/torproject.org stretch main" \
-| sudo tee /etc/apt/sources.list.d/torproject.list
+sudo apt install chromium-browser    # Instala navegador Chromium
+sudo apt update                      # Atualiza lista
+sudo apt install chromium-browser    # Instala novamente (se necessário)
 
-17. sudo apt update
+sudo apt install NotepadQQ           # Pode falhar sem PPA
 
-Atualiza a lista com o repositório do Tor incluso.
+sudo add-apt-repository ppa:notepadqq-team/notepadqq    # Adiciona PPA NotepadQQ
+sudo apt-get update                  # Atualiza lista
+sudo apt-get install notepadqq        # Instala NotepadQQ
 
-18. sudo apt install tor torbrowser-launcher
+add-apt-repository ppa:git-core/ppa   # PPA do Git atualizado
+apt-get install git                   # Instala Git
 
-Instala o serviço Tor e o lançador do Tor Browser.
+apt update; apt install git           # Atualiza + instala Git
 
-19. sudo apt install chromium-browser
+sudo apt update
+sudo apt install git                  # Instala Git
 
-Instala o navegador Chromium.
+sudo apt install git vim notepadqq    # Instala Git, Vim e NotepadQQ
 
-20. sudo apt update
+vim                                  # Abre o editor Vim
+git                                  # Mostra informações do Git
 
-Atualiza lista de pacotes.
+sudo init 0                          # Desliga o sistema
 
-21. sudo apt install chromium-browser
+sudo apt update
+sudo                                   # Sudo sozinho → não faz nada
+sudo -i                               # Abre shell como root
 
-Instala ou reinstala o Chromium.
+sudo apt update
+sudo apt upgrade                      # Atualiza pacotes
+sudo apt dist-upgrade                 # Atualização mais profunda
+apt-get update                        # Mesmo que apt update
+sudo apt full-upgrade                 # Atualização completa
 
-22. sudo apt install NotepadQQ
+sudo apt autoremove                   # Remove pacotes inúteis
+sudo apt autoclean                    # Limpa pacotes antigos
+sudo apt clean                        # Limpa cache do APT
 
-Tenta instalar NotepadQQ (pode falhar sem PPA).
+sudo apt installl git vim python3 pip   # ERRO: "installl" → não executa
+sudo apt update                        # Atualiza lista
+sudo apt install git vim pipýth        # ERRO: "pipýth" → não existe
+sudo apt install git vim python3       # Instala Git, Vim e Python3
 
-23. sudo add-apt-repository ppa:notepadqq-team/notepadqq
-
-Adiciona o PPA oficial do NotepadQQ.
-
-24. sudo apt-get update
-
-Atualiza lista de pacotes.
-
-25. sudo apt-get install notepadqq
-
-Instala o NotepadQQ.
-
-26. add-apt-repository ppa:git-core/ppa
-
-Adiciona o PPA para versões mais recentes do Git.
-
-27. apt-get install git
-
-Instala o Git.
-
-28. apt update; apt install git
-
-Executa dois comandos em sequência:
-Atualizar pacotes + instalar o Git.
-
-29. sudo apt update
-
-Atualiza lista de pacotes.
-
-30. sudo apt install git
-
-Instala o Git.
-
-31. sudo apt install git vim notepadqq
-
-Instala Git, Vim e NotepadQQ ao mesmo tempo.
-
-32. vim
-
-Abre o editor Vim.
-
-33. git
-
-Mostra informações básicas do Git ou ajuda.
-
-34. sudo init 0
-
-Desliga o sistema (equivalente ao poweroff).
-
-35. sudo apt update
-
-Atualiza lista de pacotes.
-
-36. sudo
-
-Executado sozinho, não faz nada útil.
-
-37. sudo -i
-
-Abre um shell interativo como root.
-
-38. sudo apt update
-
-Atualiza lista de pacotes.
-
-39. sudo apt upgrade
-
-Atualiza pacotes.
-
-40. sudo apt dist-upgrade
-
-Atualiza profundamente, podendo instalar/remover pacotes.
-
-41. apt-get update
-
-Mesma função do apt update.
-
-42. sudo apt full-upgrade
-
-Atualização completa, semelhante ao dist-upgrade.
-
-43. sudo apt autoremove
-
-Remove pacotes que não são mais necessários.
-
-44. sudo apt autoclean
-
-Remove pacotes baixados que estão obsoletos.
-
-45. sudo apt clean
-
-Limpa todo o cache do APT.
-
-46. sudo apt installl git vim python3 pip
-
-Comando com erro de digitação (installl). Não executa.
-
-47. sudo apt update
-
-Atualiza lista de pacotes.
-
-48. sudo apt install git vim pipýth
-
-Outro comando com erro (pacote "pipýth" não existe).
-
-49. sudo apt install git vim python3
-
-Instala Git, Vim e Python3.
-
-50. history
-
-Mostra o histórico de comandos (o conteúdo analisado aqui).
+history                               # Mostra histórico
