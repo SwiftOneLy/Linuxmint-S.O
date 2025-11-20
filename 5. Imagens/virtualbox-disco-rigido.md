@@ -1,4 +1,6 @@
-<h1>1. Passo</h1>
+
+
+<h2>1. Passo</h2>
 Abra o VirtualBox em seu computador para iniciar o processo de configuração do novo disco rígido. <br>
 
 <img width="1440" height="900" alt="Captura de tela 2025-11-18 193208" src="https://github.com/user-attachments/assets/90a4922e-a5f7-4aa6-9443-c50356b03426" />
